@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Research Assistant</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background: #f4f4f9; }
+        textarea { width: 100%; height: 100px; }
+        pre { background: #ddd; padding: 1rem; white-space: pre-wrap; }
+        button { margin-top: 1rem; padding: 0.5rem 1rem; }
+    </style>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>AI Research Assistant</h1>
+    <form method="post">
+        <label for="query">Enter research query:</label><br />
+        <textarea id="query" name="query" required></textarea><br />
+        <button type="submit">Run Research</button>
+    </form>
+
+    {% if report %}
+        <h2>Research Report</h2>
+        <pre>{{ report }}</pre>
+    {% endif %}
+</body>
+</html>
