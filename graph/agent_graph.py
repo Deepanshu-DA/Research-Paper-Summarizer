@@ -17,7 +17,7 @@ def plan_step(state):
 
 def collect_step(state):
     tasks = state["tasks"]
-    NEWS_API_KEY = "37156050163048c0b42c71c28c0a3d4f"
+    NEWS_API_KEY = "YOUR_NEWS_API"
     return {"raw_data": collector.collect(tasks, NEWS_API_KEY)}
 
 def verify_step(state):
